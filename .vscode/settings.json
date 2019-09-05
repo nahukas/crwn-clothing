@@ -1,0 +1,70 @@
+{
+  "prettifySymbolsMode.revealOn": "cursor",
+  "prettifySymbolsMode.adjustCursorMovement": false,
+  "prettifySymbolsMode.substitutions": [
+    {
+      "language": "haskell",
+      "revealOn": "active-line",
+      "substitutions": [
+        { "ugly": "\\\\", "pretty": "λ", "post": "\\s*(?:\\w|_).*?\\s*->" },
+        { "ugly": "->", "pretty": "→" },
+        { "ugly": "==", "pretty": "≡" },
+        { "ugly": "not\\s?", "pretty": "¬", "pre": "\\b", "post": "\\b" },
+        {
+          "ugly": ">",
+          "pretty": ">",
+          "pre": "[^=\\-<>]|^",
+          "post": "[^=\\-<>]|$"
+        },
+        {
+          "ugly": "<",
+          "pretty": "<",
+          "pre": "[^=\\-<>]|^",
+          "post": "[^=\\-<>]|$"
+        },
+        {
+          "ugly": ">=",
+          "pretty": "≥",
+          "pre": "[^=\\-<>]|^",
+          "post": "[^=\\-<>]|$"
+        },
+        {
+          "ugly": "<=",
+          "pretty": "≤",
+          "pre": "[^=\\-<>]|^",
+          "post": "[^=\\-<>]|$"
+        }
+      ]
+    },
+    {
+      "language": ["ocaml", { "pattern": "**/*.{ml}" }],
+      "revealOn": "none",
+      "adjustCursorMovement": true,
+      "substitutions": [
+        { "ugly": "fun", "pretty": "λ", "pre": "\\b", "post": "\\b" },
+        { "ugly": "->", "pretty": "→", "pre": "[^->]", "post": "[^->]" },
+        {
+          "ugly": "List[.]for_all",
+          "pretty": "∀",
+          "pre": "\\b",
+          "post": "\\b"
+        },
+        { "ugly": "List[.]exists", "pretty": "∃", "pre": "\\b", "post": "\\b" },
+        { "ugly": "List[.]mem", "pretty": "∈", "pre": "\\b", "post": "\\b" },
+        { "ugly": "\\|", "pretty": "║", "pre": "^\\s+" }
+      ]
+    },
+    {
+      "language": "fsharp",
+      "substitutions": [
+        { "ugly": "fun", "pretty": "λ", "pre": "\\b", "post": "\\b" },
+        { "ugly": "->", "pretty": "→", "pre": "[^->]", "post": "[^->]" },
+        { "ugly": "List[.]forall", "pretty": "∀", "pre": "\\b", "post": "\\b" },
+        { "ugly": "List[.]exists", "pretty": "∃", "pre": "\\b", "post": "\\b" },
+        { "ugly": ">>", "pretty": "≫", "pre": "[^=<>]|^", "post": "[^=<>]|$" },
+        { "ugly": "<<", "pretty": "≪", "pre": "[^=<>]|^", "post": "[^=<>]|$" },
+        { "ugly": "\\|", "pretty": "║", "pre": "^\\s+" }
+      ]
+    }
+  ]
+}
